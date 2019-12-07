@@ -1,5 +1,72 @@
-/*
+@media print{
+    .tm-sidebar, .tm-team-img, #about, .blocks .tm-content-box, #tmCarousel .carousel-indicators, section.tm-content-box img, section.tm-content-box #contact{
+        display: none;
+    }
+    
+    .tm-main-content {
+        margin: 0;
+        padding: 0;
+	}
+	.tm-banner {
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-testing to use git
+    .padding-medium, #tmCarousel {
+        display: flex;
+        flex-direction: column;
+        max-width: 88%;
+        margin: 0 auto -10px auto;
+        padding: 0;
+        text-align: center;
+    }
 
-*/
+    .heading .padding-medium {
+        max-width: 45%;
+    }
+
+    #tmCarousel h2 {
+        margin-top: 15px;
+    }
+
+    ol {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ol :nth-child(odd) {
+        text-align: right;
+    }
+
+    ol :nth-child(even) {
+        text-align: left;
+    }
+
+    h2.tm-section-title {
+        color: royalblue;
+        text-transform: uppercase;
+    }
+
+    .heading h2 {
+        color: royalblue;
+        font-weight: lighter;
+    }
+
+    .heading a{
+        color: deepskyblue;
+    }
+
+    .blocks .padding-medium :last-child {
+        font-style: italic;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+    }    
+}
+
+@media screen {
+    .tm-nav-item:hover{
+        background-color: lightskyblue;
+        color: #fff;
+    }
+}
