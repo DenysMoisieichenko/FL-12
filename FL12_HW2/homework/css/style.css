@@ -79,13 +79,16 @@
     }
 
     @keyframes move {
-        from {transform: translateX(200px);}
-        to {transform: translateX(0px);
+        from {
+            transform: translateX(220px);
+        }
+        to {
+            transform: translateX(0px);
         }
     }
 
     .tm-banner-text {
-        animation: move 5s ease-out;
+        animation: move 4s ease-out;
         text-shadow: 4px 4px 2px #333;
     }
 
