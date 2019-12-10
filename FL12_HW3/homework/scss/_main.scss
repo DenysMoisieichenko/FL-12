@@ -12,19 +12,19 @@ body {
 header {
     background-image: url('../img/m-h-day.jpg');
     background-position: center;
+    border-bottom-right-radius: 470px 150px;
 
     .header-wrap {
         @include contentBoxSize;
         padding-top: 20px;
 
         .landing-logo {
-            align-items: flex-end;
             display: flex;
 
             p {
+                display: grid;
                 font-size: 20px;
-                margin-left: 10px;
-                margin-top: 0;
+                margin: 0 0 0 10px;
                 text-align: center;
 
                 span {
