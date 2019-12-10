@@ -1,0 +1,30 @@
+body {
+  background-color: #fff;
+  font-family: "Hind", sans-serif;
+  margin: 0;
+}
+
+header {
+  background-image: url("../img/m-h-day.jpg");
+  background-position: center;
+}
+header .header-wrap {
+  margin: 0 auto;
+  max-width: 80.5%;
+  padding-top: 20px;
+}
+header .header-wrap .landing-logo {
+  align-items: flex-end;
+  display: flex;
+}
+header .header-wrap .landing-logo p {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 0;
+  text-align: center;
+}
+header .header-wrap .landing-logo p span {
+  font-size: 8px;
+}
+
+/*# sourceMappingURL=style1.css.map */

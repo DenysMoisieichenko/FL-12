@@ -1,1 +1,36 @@
-// Write your styles here
+body {
+    background-color: $bodyBackground;
+    font-family: $fontFamily;
+    margin: 0;
+}
+
+@mixin contentBoxSize {
+    margin: 0 auto;
+    max-width: 80.5%;
+}
+
+header {
+    background-image: url('../img/m-h-day.jpg');
+    background-position: center;
+
+    .header-wrap {
+        @include contentBoxSize;
+        padding-top: 20px;
+
+        .landing-logo {
+            align-items: flex-end;
+            display: flex;
+
+            p {
+                font-size: 20px;
+                margin-left: 10px;
+                margin-top: 0;
+                text-align: center;
+
+                span {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
