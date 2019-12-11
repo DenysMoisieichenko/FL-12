@@ -1,24 +1,85 @@
 body {
   background-color: #fff;
-  font-family: "Hind", sans-serif;
-  margin: 0; }
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #699900;
+  border: 1px solid #699900;
+  border-radius: 3px;
+  color: #fff;
+  height: 36px;
+  width: 110px;
+}
+button:hover {
+  cursor: pointer;
+}
 
 header {
   background-image: url("../img/m-h-day.jpg");
   background-position: center;
-  border-bottom-right-radius: 470px 150px; }
-  header .header-wrap {
-    margin: 0 auto;
-    max-width: 80.5%;
-    padding-top: 20px; }
-    header .header-wrap .landing-logo {
-      display: flex; }
-      header .header-wrap .landing-logo p {
-        display: grid;
-        font-size: 20px;
-        margin: 0 0 0 10px;
-        text-align: center; }
-        header .header-wrap .landing-logo p span {
-          font-size: 8px; }
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 500px 220px;
+}
+header .header-wrap {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 20px;
+}
+header .header-wrap p {
+  color: #2C2F3C;
+}
+header .header-wrap .landing-logo {
+  display: flex;
+}
+header .header-wrap .landing-logo p {
+  display: grid;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+header .header-wrap .landing-logo p span {
+  font-size: 8px;
+}
+header .header-wrap .header_heading {
+  font-size: 60px;
+  font-stretch: 100px;
+  font-weight: bold;
+  line-height: 1em;
+  max-width: 50%;
+  margin-bottom: 45px;
+}
+header .header-wrap .header_text {
+  font-size: 14px;
+  max-width: 40%;
+}
+header .header-wrap button {
+  margin: 30px 120px 80px 0;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+main .section_text {
+  color: #2C2F3C;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+main .section_card_wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .section_card_wrap .section_card {
+  background-color: #21232E;
+  margin: 10px auto;
+  width: 68%;
+}
 
 /*# sourceMappingURL=style1.css.map */
