@@ -1,7 +1,6 @@
 @mixin contentBoxSize {
     max-width: 80%;
 }
-
 @mixin buttons {
     background-color: $buttonsColor;
     border: 1px solid $buttonsColor;
@@ -13,17 +12,14 @@
         cursor: pointer;
     }
 }
-
 body {
     background-color: $bodyBackground;
     font-family: $fontFamily;
     margin: 0 auto;
 }
-
 button {
     @include buttons;
 }
-
 header {
     background: {
         image: $headerBachground;
@@ -32,19 +28,15 @@ header {
         size: cover;
     }
     border-bottom-right-radius: 500px 220px;
-
     .header-wrap {
         margin: 0 auto;
         @include contentBoxSize;
         padding-top: 20px;
-
         p {
             color: $headerColor;
         }
-        
         .landing-logo {
             display: flex;
-
             p {
                 display: grid;
                 font: {
@@ -53,13 +45,11 @@ header {
                 }
                 margin: 0 0 0 10px;
                 text-align: center;
-
                 span {
                     font-size: 8px;
                 }
             }
         }
-
         .header_heading {
             font: {
                 size: 60px;
@@ -70,12 +60,10 @@ header {
             max-width: 50%;
             margin-bottom: 45px;
         }
-
         .header_text {
-            font-size: 14px;
+            font-size: $fontSizePlainText;
             max-width: 40%;
         }
-
         button {
             margin: 30px 120px 80px 0;
         }
@@ -85,7 +73,6 @@ header {
 main {
     @include contentBoxSize;
     margin: 0 auto;
-
     .section_text {
         color: $headerColor;
         font: {
@@ -94,17 +81,30 @@ main {
         }
         text-align: center;
     }
-
     .section_card_wrap {
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         .section_card {
+            align-items: inherit;
             background-color: $sectionBgColor;
+            display: inherit;
+            flex-direction: row;
             margin: 10px auto;
             width: 68%;
+            img {
+                padding: 15px;
+                width: 45%;
+            }
+            .section_card_right_container {
+                text-align: center;
+                width: 62%;
+                .section_card_text {
+                    font-size: $fontSizePlainText;
+                    text-align: left;
+                }
+            }
         }
     }
 }

@@ -77,9 +77,24 @@ main .section_card_wrap {
   justify-content: center;
 }
 main .section_card_wrap .section_card {
+  align-items: inherit;
   background-color: #21232E;
+  display: inherit;
+  flex-direction: row;
   margin: 10px auto;
   width: 68%;
+}
+main .section_card_wrap .section_card img {
+  padding: 15px;
+  width: 45%;
+}
+main .section_card_wrap .section_card .section_card_right_container {
+  text-align: center;
+  width: 62%;
+}
+main .section_card_wrap .section_card .section_card_right_container .section_card_text {
+  font-size: 14px;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style1.css.map */
