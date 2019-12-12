@@ -3,14 +3,22 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
 }
+body a.login {
+  color: #fff;
+  font-size: 16px;
+}
+body a.section_link {
+  color: #C0C3CE;
+  font-size: 12px;
+}
 
 button {
   background-color: #699900;
-  border: 1px solid #699900;
+  border: none;
   border-radius: 3px;
   color: #fff;
-  height: 36px;
-  width: 110px;
+  height: 38px;
+  width: 112px;
 }
 button:hover {
   cursor: pointer;
@@ -22,6 +30,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom-right-radius: 500px 220px;
+  position: relative;
+  z-index: 1;
 }
 header .header-wrap {
   margin: 0 auto;
@@ -46,14 +56,23 @@ header .header-wrap .landing-logo p span {
 }
 header .header-wrap .header_heading {
   font-size: 60px;
-  font-stretch: 100px;
   font-weight: bold;
   line-height: 1em;
   max-width: 50%;
   margin-bottom: 45px;
+  position: relative;
+}
+header .header-wrap .header_heading::before {
+  background: #14A0C7;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 48px;
+  top: 64%;
+  width: 47%;
 }
 header .header-wrap .header_text {
-  font-size: 14px;
+  font-size: 12px;
   max-width: 40%;
 }
 header .header-wrap button {
@@ -66,9 +85,20 @@ main {
 }
 main .section_text {
   color: #2C2F3C;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 600;
+  margin-bottom: 20px;
   text-align: center;
+}
+main .section_text::before {
+  background: #14A0C7;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 38px;
+  left: 50.5%;
+  top: 82.5%;
+  width: 9.3%;
 }
 main .section_card_wrap {
   align-items: center;
@@ -79,22 +109,102 @@ main .section_card_wrap {
 main .section_card_wrap .section_card {
   align-items: inherit;
   background-color: #21232E;
+  border-radius: 4px;
   display: inherit;
   flex-direction: row;
   margin: 10px auto;
-  width: 68%;
+  width: 71%;
 }
 main .section_card_wrap .section_card img {
-  padding: 15px;
-  width: 45%;
+  border-radius: 4px;
+  margin: 15px;
+  width: 39%;
 }
 main .section_card_wrap .section_card .section_card_right_container {
+  color: #C0C3CE;
+  margin: auto;
   text-align: center;
-  width: 62%;
+  width: 46%;
+}
+main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 16px;
 }
 main .section_card_wrap .section_card .section_card_right_container .section_card_text {
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
+main .section_banner {
+  max-width: 80%;
+  align-items: center;
+  background: linear-gradient(to right, #649311, #3160CA);
+  border-radius: 4px;
+  display: flex;
+  margin: 90px auto 0 auto;
+  position: relative;
+  width: 77%;
+  z-index: 1;
+}
+main .section_banner .section_banner_text_wrap {
+  line-height: .8em;
+  margin: 0 auto;
+  width: 50%;
+}
+main .section_banner .section_banner_text_wrap .section_banner_heading {
+  color: #2C2F3C;
+  font-size: 20px;
+  font-weight: bold;
+}
+main .section_banner .section_banner_text_wrap .section_banner_text {
+  color: lightgray;
+  font-size: 10px;
+  margin-bottom: 32px;
+}
+main .section_banner .section_banner_text_wrap::before {
+  background: #14A0C7;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 62.5%;
+  height: 30px;
+  left: 22.5%;
+  width: 5%;
+}
+main .section_banner button {
+  margin-right: 90px;
+}
 
-/*# sourceMappingURL=style1.css.map */
+footer {
+  background-color: #21232E;
+  color: #C0C3CE;
+  height: 170px;
+  margin-top: -48px;
+}
+footer .footer-wrap {
+  max-width: 80%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+footer .landing-logo {
+  display: flex;
+}
+footer .landing-logo p {
+  display: grid;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+footer .landing-logo p span {
+  font-size: 8px;
+}
+footer .footer_text {
+  width: 22.4%;
+}
+footer .footer-cr, footer .footer_text {
+  font-size: 12px;
+}

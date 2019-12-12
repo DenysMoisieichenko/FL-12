@@ -1,18 +1,56 @@
-@mixin contentBoxSize {
-    max-width: 80%;
-}
+$linksStyle: (
+    headerColor: #fff,
+    headerSize: 16px,
+    sectionColor: $sectionColor,
+    sectionSize: $fontSizePlainText
+);
 @mixin buttons {
     background-color: $buttonsColor;
-    border: 1px solid $buttonsColor;
+    border: none;
     border-radius: 3px;
     color: #fff;
-    height: 36px;
-    width: 110px;
+    height: 38px;
+    width: 112px;
     &:hover {
         cursor: pointer;
     }
 }
+@mixin contentBoxSize {
+    max-width: 80%;
+}
+@mixin landingLogo {
+    display: flex;
+    p {
+        display: grid;
+        font: {
+            size: 20px;
+            weight: 600;
+        }
+        margin: 0 0 0 10px;
+        text-align: center;
+        span {
+            font-size: 8px;
+        }   
+    } 
+}
+@mixin links {
+    a.login {
+        color: map-get($linksStyle, headerColor);
+        font-size: map-get($linksStyle, headerSize);
+    }
+    a.section_link {
+        color: map-get($linksStyle, sectionColor);
+        font-size: map-get($linksStyle, sectionSize);
+    }
+}
+@mixin selectedText {
+    background: $selectedTextColor;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
 body {
+    @include links;
     background-color: $bodyBackground;
     font-family: $fontFamily;
     margin: 0 auto;
@@ -28,6 +66,8 @@ header {
         size: cover;
     }
     border-bottom-right-radius: 500px 220px;
+    position: relative;
+    z-index: 1;
     .header-wrap {
         margin: 0 auto;
         @include contentBoxSize;
@@ -36,29 +76,23 @@ header {
             color: $headerColor;
         }
         .landing-logo {
-            display: flex;
-            p {
-                display: grid;
-                font: {
-                    size: 20px;
-                    weight: 600;
-                }
-                margin: 0 0 0 10px;
-                text-align: center;
-                span {
-                    font-size: 8px;
-                }
-            }
+            @include landingLogo;
         }
         .header_heading {
             font: {
                 size: 60px;
-                stretch: 100px;
                 weight: bold;
             }
             line-height: 1em;
             max-width: 50%;
             margin-bottom: 45px;
+            position: relative;
+            &::before {
+                @include selectedText;
+                height: 48px;
+                top: 64%;
+                width: 47%;
+            }
         }
         .header_text {
             font-size: $fontSizePlainText;
@@ -69,17 +103,24 @@ header {
         }
     }
 }
-
 main {
     @include contentBoxSize;
     margin: 0 auto;
     .section_text {
         color: $headerColor;
         font: {
-            size: 25px;
+            size: 28px;
             weight: 600;
         }
+        margin-bottom: 20px;
         text-align: center;
+        &::before {
+            @include selectedText;
+            height: 38px;
+            left: 50.5%;
+            top: 82.5%;
+            width: 9.3%;
+        }
     }
     .section_card_wrap {
         align-items: center;
@@ -89,22 +130,93 @@ main {
         .section_card {
             align-items: inherit;
             background-color: $sectionBgColor;
+            border-radius: 4px;
             display: inherit;
             flex-direction: row;
             margin: 10px auto;
-            width: 68%;
+            width: 71%;
             img {
-                padding: 15px;
-                width: 45%;
+                border-radius: 4px;
+                margin: 15px;
+                width: 39%;
             }
             .section_card_right_container {
+                color: $sectionColor;
+                margin: auto;
                 text-align: center;
-                width: 62%;
+                width: 46%;
+                .section_card_heading {
+                    color: #fff;
+                    font-weight: 600;
+                    padding-bottom: 16px;
+                }
                 .section_card_text {
                     font-size: $fontSizePlainText;
                     text-align: left;
                 }
             }
         }
+    }
+    .section_banner {
+        @include contentBoxSize;
+        align-items: center;
+        background: linear-gradient(to right, $leftGradient, $rightGradient );
+        border-radius: 4px;
+        display: flex;
+        margin: 90px auto 0 auto;
+        position: relative;
+        width: 77%;
+        z-index: 1;
+        .section_banner_text_wrap {
+            line-height: .8em;
+            margin: 0 auto;
+            width: 50%;
+            .section_banner_heading {
+                color: $headerColor;
+                font: {
+                    size: 20px;
+                    weight: bold;
+                }
+            }
+            .section_banner_text {
+                color: lightgray;
+                font-size: 10px;
+                margin-bottom: 32px;
+            }
+            &::before {
+                @include selectedText;
+                bottom: 62.5%;
+                height: 30px;
+                left: 22.5%;
+                width: 5%;
+            }
+        }
+        button {
+            margin-right: 90px;
+        }
+    }
+}
+footer {
+    background-color: $sectionBgColor;
+    color: $sectionColor;
+    height: 170px;
+    margin-top: -48px;
+    .footer-wrap {
+        @include contentBoxSize;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 70px;
+    }
+    .landing-logo {
+        @include landingLogo;
+    }
+    .footer_text {
+        @extend .footer-cr ;
+        width: 22.4%;
+    }
+    .footer-cr {
+        font-size: $fontSizePlainText;
     }
 }
