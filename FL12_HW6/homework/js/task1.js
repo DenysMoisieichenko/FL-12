@@ -2,7 +2,7 @@ let a = prompt('Enter the "a" coefficient for the quadratic equation "a*x**2 + b
 let b = prompt('Enter the "b" coefficient for the quadratic equation "a*x**2 + b*x + c = 0".');
 let c = prompt('Enter the "c" coefficient for the quadratic equation "a*x**2 + b*x + c = 0".');
 
-if (a === '' || b === '' || c === '' || a === 0 || isNaN(a) || isNaN(b) || isNaN(c)) {
+if (a === '' || b == '' || c === '' || a === 0 || isNaN(a) || isNaN(b) || isNaN(c)) {
     alert('Invalid input data');
 } else {
     let discriminant = b * b - 4 * a * c;
