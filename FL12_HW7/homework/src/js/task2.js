@@ -23,7 +23,7 @@ if (playGame === false) {
         first:
         for (let i = 3; i >= 0; i--) {
             if (i === 0) {
-                alert(`Thank you for your participation. Your prize is: ${totalPrize}$`);
+                alert(`Thank you for your participation. Your prize is: 0$`);
                 let playAgain = confirm('Do You want to play again?');
 
                 if (playAgain === true) {
